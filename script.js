@@ -1,50 +1,50 @@
 const body = document.body;
 const header = document.querySelector(".site-header");
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".site-nav a");
-const yearTarget = document.querySelector("#current-year");
 const revealItems = document.querySelectorAll(".reveal");
+const yearTarget = document.querySelector("#current-year");
 
-function updateHeaderOnScroll() {
+function updateHeaderState() {
   if (!header) return;
-  header.classList.toggle("is-scrolled", window.scrollY > 16);
+  header.classList.toggle("is-scrolled", window.scrollY > 10);
 }
 
 function closeMenu() {
-  if (!body || !navToggle || !siteNav) return;
+  if (!body || !menuToggle || !nav) return;
   body.classList.remove("menu-open");
-  navToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-expanded", "false");
 }
 
 function toggleMenu() {
-  if (!body || !navToggle || !siteNav) return;
+  if (!body || !menuToggle || !nav) return;
   const isOpen = body.classList.toggle("menu-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
 }
 
-if (navToggle) {
-  navToggle.addEventListener("click", toggleMenu);
+if (menuToggle) {
+  menuToggle.addEventListener("click", toggleMenu);
 }
 
 navLinks.forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 980) {
-    closeMenu();
-  }
-});
-
-window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
-updateHeaderOnScroll();
-
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
   }
 });
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 920) {
+    closeMenu();
+  }
+});
+
+window.addEventListener("scroll", updateHeaderState, { passive: true });
+updateHeaderState();
 
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
@@ -61,7 +61,7 @@ if ("IntersectionObserver" in window) {
     },
     {
       threshold: 0.18,
-      rootMargin: "0px 0px -40px 0px",
+      rootMargin: "0px 0px -30px 0px",
     },
   );
 
