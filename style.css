@@ -101,6 +101,61 @@ svg {
     linear-gradient(180deg, #101015 0%, #0b0b0f 100%);
 }
 
+.section-photo {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.section-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--section-photo-image);
+  background-size: cover;
+  background-position: var(--section-photo-position, center);
+  background-repeat: no-repeat;
+  opacity: var(--section-photo-opacity, 0.07);
+  filter: saturate(0.95) contrast(1.02);
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.section-photo > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-photo-cultos {
+  --section-photo-image: url("img/bg-culto-congregacao.jpg");
+  --section-photo-position: center center;
+  --section-photo-opacity: 0.08;
+}
+
+.section-photo-localizacao {
+  --section-photo-image: url("img/bg-fachada-frontal.jpg");
+  --section-photo-position: center center;
+  --section-photo-opacity: 0.06;
+}
+
+.section-photo-sobre {
+  --section-photo-image: url("img/bg-oracao-mulheres.jpg");
+  --section-photo-position: center 24%;
+  --section-photo-opacity: 0.075;
+}
+
+.section-photo-departamentos {
+  --section-photo-image: url("img/bg-renova-jovem.jpg");
+  --section-photo-position: center center;
+  --section-photo-opacity: 0.055;
+}
+
+.section-photo-tema {
+  --section-photo-image: url("img/bg-pastor-adoracao.jpg");
+  --section-photo-position: center 28%;
+  --section-photo-opacity: 0.07;
+}
+
 .section-heading {
   max-width: 720px;
   margin: 0 auto 2rem;
@@ -362,6 +417,7 @@ body.menu-open .site-nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   filter: saturate(0.15) contrast(1.05) brightness(0.34);
 }
 
@@ -499,6 +555,7 @@ body.menu-open .site-nav {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center center;
   background: #0f0f13;
 }
 
@@ -669,6 +726,7 @@ body.menu-open .site-nav {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: center top;
   background: #0f0f13;
 }
 
