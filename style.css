@@ -112,8 +112,8 @@ svg {
   background-size: cover;
   background-position: var(--section-photo-position, center);
   background-repeat: no-repeat;
-  opacity: var(--section-photo-opacity, 0.14);
-  filter: saturate(0.9) contrast(1.02) brightness(0.9);
+  opacity: var(--section-photo-opacity, 0.22);
+  filter: saturate(0.95) contrast(1.03) brightness(1);
   transform: scale(1.025);
   pointer-events: none;
 }
@@ -124,8 +124,8 @@ svg {
   inset: 0;
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(8, 8, 10, 0.9), rgba(8, 8, 10, 0.64)),
-    linear-gradient(180deg, rgba(8, 8, 10, 0.18), rgba(8, 8, 10, 0.58));
+    linear-gradient(90deg, rgba(8, 8, 10, 0.74), rgba(8, 8, 10, 0.48)),
+    linear-gradient(180deg, rgba(8, 8, 10, 0.12), rgba(8, 8, 10, 0.44));
   pointer-events: none;
 }
 
@@ -137,31 +137,31 @@ svg {
 .section-photo-cultos {
   --section-photo-image: url("img/bg-culto-congregacao.webp");
   --section-photo-position: center 46%;
-  --section-photo-opacity: 0.2;
+  --section-photo-opacity: 0.26;
 }
 
 .section-photo-localizacao {
   --section-photo-image: url("img/bg-fachada-frontal.webp");
   --section-photo-position: center 42%;
-  --section-photo-opacity: 0.18;
+  --section-photo-opacity: 0.24;
 }
 
 .section-photo-sobre {
   --section-photo-image: url("img/bg-oracao-mulheres.webp");
   --section-photo-position: center 32%;
-  --section-photo-opacity: 0.18;
+  --section-photo-opacity: 0.24;
 }
 
 .section-photo-departamentos {
   --section-photo-image: url("img/bg-renova-jovem.webp");
   --section-photo-position: center 34%;
-  --section-photo-opacity: 0.16;
+  --section-photo-opacity: 0.22;
 }
 
 .section-photo-tema {
   --section-photo-image: url("img/bg-pastor-adoracao.webp");
   --section-photo-position: center 28%;
-  --section-photo-opacity: 0.18;
+  --section-photo-opacity: 0.24;
 }
 
 .section-heading {
@@ -785,7 +785,7 @@ body.menu-open .site-nav {
 
 .department-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: var(--department-position, center center);
   background: #0f0f13;
@@ -793,7 +793,7 @@ body.menu-open .site-nav {
 }
 
 .department-card-wide img {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
 }
 
 .department-card:nth-child(2) {
