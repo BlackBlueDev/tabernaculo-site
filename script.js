@@ -6,6 +6,7 @@ const navLinks = document.querySelectorAll(".site-nav a");
 const revealItems = document.querySelectorAll(".reveal");
 const yearTarget = document.querySelector("#current-year");
 const accordions = document.querySelectorAll(".accordion");
+const aboutDetails = document.querySelector(".about-details");
 
 let lastScrollY = window.scrollY;
 
@@ -97,6 +98,16 @@ accordions.forEach((accordion) => {
     });
   });
 });
+
+if (aboutDetails) {
+  aboutDetails.addEventListener("toggle", () => {
+    if (aboutDetails.open) return;
+
+    accordions.forEach((accordion) => {
+      accordion.open = false;
+    });
+  });
+}
 
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
