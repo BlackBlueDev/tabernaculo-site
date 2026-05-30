@@ -140,12 +140,6 @@ svg {
   --section-photo-opacity: 0.26;
 }
 
-.section-photo-localizacao {
-  --section-photo-image: url("img/sobre-acolhimento.webp");
-  --section-photo-position: center center;
-  --section-photo-opacity: 0.24;
-}
-
 .section-photo-sobre {
   --section-photo-image: url("img/bg-oracao-mulheres.webp");
   --section-photo-position: center 32%;
@@ -154,8 +148,13 @@ svg {
 
 .section-photo-departamentos {
   --section-photo-image: url("img/bg-renova-jovem.webp");
-  --section-photo-position: center 34%;
-  --section-photo-opacity: 0.22;
+  --section-photo-position: center top;
+  --section-photo-opacity: 0.16;
+}
+
+.section-photo-departamentos::before {
+  background-size: contain;
+  transform: none;
 }
 
 .section-photo-tema {
@@ -746,7 +745,7 @@ body.menu-open .site-nav {
 .department-card img {
   width: 100%;
   aspect-ratio: 5 / 4;
-  object-fit: cover;
+  object-fit: contain;
   object-position: var(--department-position, center center);
   background: #0f0f13;
   border-bottom: 1px solid var(--line);
@@ -942,6 +941,8 @@ body.menu-open .site-nav {
 
 .contact-grid {
   grid-template-columns: 1fr;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .contact-card {
@@ -1195,10 +1196,6 @@ body.menu-open .site-nav {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-columns: initial;
     overflow: visible;
-  }
-
-  .contact-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .footer-grid {
