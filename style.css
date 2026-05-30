@@ -141,8 +141,8 @@ svg {
 }
 
 .section-photo-localizacao {
-  --section-photo-image: url("img/bg-fachada-frontal.webp");
-  --section-photo-position: center 42%;
+  --section-photo-image: url("img/sobre-acolhimento.webp");
+  --section-photo-position: center center;
   --section-photo-opacity: 0.24;
 }
 
@@ -702,18 +702,18 @@ body.menu-open .site-nav {
 
 .leadership-card img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  object-position: var(--leader-position, center 18%);
+  object-position: var(--leader-position, center top);
   background: #0f0f13;
 }
 
 .leadership-card:nth-child(1) {
-  --leader-position: center 16%;
+  --leader-position: center top;
 }
 
 .leadership-card:nth-child(2) {
-  --leader-position: 54% 14%;
+  --leader-position: 54% top;
 }
 
 .leadership-body {
@@ -745,15 +745,49 @@ body.menu-open .site-nav {
 
 .department-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 5 / 4;
   object-fit: cover;
   object-position: var(--department-position, center center);
   background: #0f0f13;
   border-bottom: 1px solid var(--line);
 }
 
-.department-card-wide img {
-  aspect-ratio: 4 / 3;
+.department-visual {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), transparent 42%),
+    linear-gradient(135deg, #151922, #232932);
+}
+
+.department-visual::before,
+.department-visual::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transform: rotate(-12deg);
+}
+
+.department-visual::before {
+  inset: 18% 14%;
+}
+
+.department-visual::after {
+  inset: 30% 24%;
+}
+
+.department-visual-worship {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.11), transparent 42%),
+    linear-gradient(135deg, #111820, #34424c);
+}
+
+.department-visual-children {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), transparent 42%),
+    linear-gradient(135deg, #1d1820, #584957);
 }
 
 .department-card:nth-child(2) {
@@ -762,14 +796,6 @@ body.menu-open .site-nav {
 
 .department-card:nth-child(4) {
   --department-position: center 48%;
-}
-
-.department-card:nth-child(5) {
-  --department-position: center 42%;
-}
-
-.department-card:nth-child(6) {
-  --department-position: center 44%;
 }
 
 .department-body {
