@@ -1,54 +1,40 @@
-# Tabernáculo de Davi (TDD Sede) - Site Institucional em Vue 3 + Vite
+# Tabernáculo de Davi (TDD Sede) - Site Institucional Estático 100% Autônomo
 
-Este repositório contém o novo site oficial da igreja **Tabernáculo de Davi (TDD Sede)** em Caruaru-PE, refatorado para a framework moderna **Vue 3 + Vite**, ícones **Lucide Icons** e **gestão dinâmica total via JSON** (`conteudo.json`).
-
----
-
-## 🚀 Arquitetura e Tecnologias
-
-- **Framework**: Vue 3 (Composition API com `<script setup>`)
-- **Build Tool**: Vite (Servidor ultrarrápido rodando na porta 2020)
-- **Ícones**: Lucide Icons (`lucide-vue-next`)
-- **Design System**: Vanilla CSS de alta fidelidade no metálico grafite/chumbo com responsividade completa para Celular, Tablet e PC.
+Este repositório contém o site oficial da igreja **Tabernáculo de Davi (TDD Sede)** em Caruaru-PE, construído com **Vue 3 estático via CDN**, **estilização metálica grafite**, **sincronização automática com Google Agenda a cada 1 minuto** e **gestão dinâmica total via JSON** (`conteudo.json`).
 
 ---
 
-## 📁 Estrutura de Componentes
+## ⚡ Arquitetura 100% Estática (Sem Necessidade do Node.js ou node_modules)
 
-- `src/App.vue`: Gerenciador de estado reativo do `conteudo.json`.
-- `src/components/Header.vue`: Cabeçalho com logo dinâmico e menu mobile.
-- `src/components/Hero.vue`: Banner principal e atalhos.
-- `src/components/TemaMes.vue`: Rotação automática do tema do mês.
-- `src/components/Cultos.vue`: Agenda semanal com acordeões de orientações.
-- `src/components/AgendaGoogle.vue`: Sincronização 24/7 com o Google Agenda.
-- `src/components/Eventos.vue` & `src/components/Campanhas.vue`: Programações especiais dinâmicas.
-- `src/components/Sobre.vue`: Documentação oficial (Missão, Visão, 9 Valores e Versículos Chave).
-- `src/components/Lideranca.vue`: Fotos e biografias pastorais (500x500).
-- `src/components/Departamentos.vue`: Os 7 ministérios da igreja com logos.
-- `src/components/Localizacao.vue`: Endereço e mapa interativo.
-- `src/components/Contato.vue`: E-mail oficial e redes sociais.
-- `src/components/Footer.vue`: Rodapé institucional com direitos autorais atualizados.
+- **Zero Node / Zero `node_modules`**: O site roda de forma **100% estática e autônoma** diretamente no navegador.
+- **Pronto para Netlify / GitHub Pages / Hostinger**: Basta fazer upload da pasta ou `git push` para o GitHub e conectar ao Netlify. Não requer comandos de build no servidor!
+- **Hospedagem 24/7 Grátis**: Funciona em qualquer servidor estático ou plataforma de hospedagem gratuita.
 
 ---
 
-## 🖼️ Como Alterar Conteúdos no `conteudo.json`
+## 🚀 Funcionalidades Integradas
 
-Todas as imagens, logos, horários, fotos da liderança e ministérios continuam sendo carregados diretamente do arquivo **`conteudo.json`**. Basta atualizar os textos ou links de imagem nele.
+- **Gestão Dinâmica via JSON**: Todas as informações, logos, horários, liderança e ministérios são editados diretamente no arquivo [`conteudo.json`](file:///d:/myigreja/tddsede/conteudo.json).
+- **Cultos Fixos Permanentes**: Domingo (18h00), Segunda-feira (19h30) e Quarta-feira (19h30) permanecem visíveis de forma garantida.
+- **Sincronização com Google Agenda a cada 1 minuto**: Eventos criados na agenda do Google aparecem como cards novos na sequência cronológica da semana e desaparecem automaticamente quando o evento passa.
+- **Accordion de Orientações Unificado**: Todos os cards possuem o botão "Ver orientações do culto" que expande detalhes e o botão "Adicionar no meu Google Agenda".
+- **Design Retrato Compacto dos Pastores**: Proporção `3:4` com altura máxima reduzida para preservar espaço.
+- **Slider por Toque no Celular**: Carrossel horizontal para arrastar com o dedo em Liderança e Ministérios no smartphone.
+- **Frase Institucional no Rodapé**: *"Estamos há dois anos resgatando vidas"*.
 
 ---
 
-## 💻 Como Rodar e Testar Localmente (Porta 2020)
+## 💻 Como Rodar Localmente (Porta 2020)
 
 1. Dê um duplo clique no arquivo **[`iniciar.bat`](file:///d:/myigreja/tddsede/iniciar.bat)** (ou `start.bat`).
-2. O script instalará as dependências caso necessário e iniciará o servidor na porta 2020: `http://localhost:2020`.
-3. Ao alterar qualquer imagem ou texto no `conteudo.json`, o site atualizará na hora!
+2. O servidor local abrirá automaticamente na porta **`http://localhost:2020`**.
+3. Não precisa instalar nada nem rodar comandos do Node!
 
 ---
 
-## 🌐 Como Hospedar no Netlify via GitHub
+## 🌐 Como Hospedar no Netlify via GitHub (24/7 Online)
 
-1. Envie a pasta para o seu repositório no GitHub (`git push`).
+1. Envie esta pasta para o seu repositório no GitHub (`git push`).
 2. Conecte o repositório no [Netlify](https://www.netlify.com/).
-3. Configurações de Build no Netlify:
-   - **Build Command**: `npm run build`
-   - **Publish directory**: `dist`
+3. Não precisa preencher nada em "Build Command"! O diretório public é a própria raiz `.`.
+4. O site estará online 24/7 gratuitamente em segundos!

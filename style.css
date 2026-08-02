@@ -22,7 +22,7 @@
   --accent-graphite: #64748b;
   --accent-graphite-light: #94a3b8;
   --accent-graphite-dark: #334155;
-  --accent-gold: #94a3b8; /* Legacy mapping mapped to sleek steel graphite */
+  --accent-gold: #94a3b8;
   --accent-gold-hover: #cbd5e1;
   
   --gradient-gold: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 50%, #475569 100%);
@@ -175,7 +175,7 @@ p {
 .icon {
   width: 1.25rem;
   height: 1.25rem;
-  fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* Accordion Buttons & Collapsible Tabs */
@@ -262,7 +262,7 @@ p {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* Header & Navigation (Respiro Visual, Tipografia 0.88rem, Gap 2.2rem) */
+/* Header & Navigation */
 .site-header {
   position: fixed;
   top: 0;
@@ -294,7 +294,6 @@ p {
   text-decoration: none;
 }
 
-/* Logo: Sem círculo laranja, fundo 100% transparente, ampliada */
 .brand-logo {
   height: 64px;
   width: auto;
@@ -326,7 +325,6 @@ p {
   letter-spacing: 0.03em;
 }
 
-/* Menu Superior: Tipografia 0.88rem e Espaçamento Aumentado (2.2rem) */
 .site-nav {
   display: flex;
   align-items: center;
@@ -567,31 +565,6 @@ p {
   margin-top: 0.8rem;
 }
 
-/* Google Calendar Integration Section */
-.google-calendar-container {
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 1.8rem;
-  box-shadow: var(--shadow-md);
-}
-
-.calendar-wrapper {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border-accent);
-}
-
-.calendar-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  filter: invert(0.9) hue-rotate(180deg) opacity(0.92);
-}
-
 /* Cultos / Agenda Grid */
 .service-card {
   background: var(--bg-glass-card);
@@ -644,77 +617,6 @@ p {
   margin-bottom: 0.6rem;
 }
 
-/* Eventos & Campanhas Cards */
-.event-card {
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-
-.event-card:hover {
-  border-color: var(--border-accent);
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-
-.event-media {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.event-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.event-card:hover .event-media img {
-  transform: scale(1.08);
-}
-
-.event-tag-pill {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  background: rgba(11, 13, 20, 0.85);
-  backdrop-filter: blur(8px);
-  color: var(--accent-graphite-light);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--border-accent);
-}
-
-.event-body {
-  padding: 1.8rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.event-date {
-  color: var(--accent-graphite-light);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem;
-}
-
-.event-body h3 {
-  margin-bottom: 0.8rem;
-}
-
-.event-body p {
-  flex-grow: 1;
-  margin-bottom: 1.5rem;
-}
-
 /* About & Details */
 .about-grid {
   display: grid;
@@ -739,10 +641,11 @@ p {
   display: block;
 }
 
-/* Leadership Grid (Pastores): Proporção Proporcional Compacta 500x500 */
+/* Leadership Grid (Pastores): Formato Retrato Vertical 3:4 */
 .leadership-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -752,6 +655,9 @@ p {
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: var(--transition);
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .pastor-card:hover {
@@ -759,11 +665,10 @@ p {
   transform: translateY(-4px);
 }
 
-/* Proporção 500x500 (1:1 Aspect Ratio) para Celular e PC */
 .pastor-img-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-height: 340px;
+  aspect-ratio: 3 / 4;
+  height: 360px;
   overflow: hidden;
   position: relative;
   background-color: #0b0d14;
@@ -805,7 +710,7 @@ p {
   letter-spacing: 0.05em;
 }
 
-/* Departments Grid (7 Departamentos Padronizados em 500x500) */
+/* Departments Grid */
 .dept-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -828,7 +733,6 @@ p {
   box-shadow: var(--shadow-graphite);
 }
 
-/* Container de Imagem no formato quadrado 500x500 (1:1 Aspect Ratio) */
 .dept-thumb {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -852,7 +756,6 @@ p {
   transform: scale(1.05);
 }
 
-/* Título e Descrição exibidos obrigatoriamente ABAIXO da imagem */
 .dept-content {
   padding: 1.5rem;
   flex-grow: 1;
@@ -1014,7 +917,7 @@ p {
   color: var(--text-dim);
 }
 
-/* Scroll Animations (IntersectionObserver) */
+/* Scroll Animations */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -1026,11 +929,7 @@ p {
   transform: translateY(0);
 }
 
-/* ==========================================================================
-   TAILORED DEVICE STYLES & BREAKPOINTS (CELULAR, TABLET, PC)
-   ========================================================================== */
-
-/* 📱 1. CELULAR / MOBILE MODE (< 640px) */
+/* Breakpoints (Celular, Tablet, PC) */
 @media (max-width: 640px), body.device-mobile {
   .container {
     padding: 0 1rem;
@@ -1132,17 +1031,53 @@ p {
     margin-bottom: 2rem;
   }
 
-  .card-grid, .dept-grid, .leadership-grid, .contact-grid {
+  .card-grid, .contact-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
 
-  .theme-card {
-    padding: 1.8rem 1.2rem;
+  /* Slider Horizontal por Toque (Arrastar para o lado no Celular) */
+  .dept-grid, .leadership-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.2rem;
+    padding-bottom: 1rem;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .calendar-wrapper {
-    height: 380px;
+  .dept-grid::-webkit-scrollbar,
+  .leadership-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .dept-grid::-webkit-scrollbar-thumb,
+  .leadership-grid::-webkit-scrollbar-thumb {
+    background: var(--border-accent);
+    border-radius: 4px;
+  }
+
+  .pastor-card, .dept-card {
+    flex: 0 0 82%;
+    max-width: 280px;
+    scroll-snap-align: start;
+  }
+
+  .pastor-img-wrapper {
+    aspect-ratio: 3 / 4;
+    height: 320px;
+  }
+
+  .dept-thumb {
+    max-height: 200px;
+  }
+
+  .theme-card {
+    padding: 1.8rem 1.2rem;
   }
 
   .about-grid, .location-grid, .footer-grid {
@@ -1165,7 +1100,6 @@ p {
   }
 }
 
-/* 📱 2. TABLET MODE (641px - 1024px) */
 @media (min-width: 641px) and (max-width: 1024px), body.device-tablet {
   .container {
     padding: 0 1.5rem;
@@ -1201,7 +1135,6 @@ p {
   }
 }
 
-/* 🖥️ 3. PC / DESKTOP MODE (> 1025px) */
 @media (min-width: 1025px), body.device-desktop {
   .menu-toggle {
     display: none;
