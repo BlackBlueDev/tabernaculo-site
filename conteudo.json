@@ -1,0 +1,394 @@
+{
+  "configuracoes": {
+    "exibirTemaDoMes": true,
+    "exibirAgendaSemanal": true,
+    "exibirGoogleAgenda": true,
+    "exibirEventos": false,
+    "exibirCampanhas": false,
+    "exibirAvisos": false,
+    "exibirLideranca": true,
+    "exibirDepartamentos": true
+  },
+  "imagensGlobais": {
+    "logoCabecalho": "img/logo-tabernaculo.jpg",
+    "heroBackground": "img/hero-fachada-exterior.webp",
+    "sobreImagem": "img/sobre-acolhimento.webp"
+  },
+  "googleCalendar": {
+    "ativo": true,
+    "calendarId": "tabernaculodedavicaruaru@gmail.com",
+    "embedUrl": "https://calendar.google.com/calendar/embed?src=tabernaculodedavicaruaru%40gmail.com&ctz=America%2FRecife",
+    "subscribeUrl": "https://calendar.google.com/calendar/render?cid=tabernaculodedavicaruaru%40gmail.com",
+    "apiKey": ""
+  },
+  "igreja": {
+    "nome": "Tabernáculo de Davi",
+    "subtitulo": "Casa de Oração e Adoração",
+    "cidade": "Caruaru - PE",
+    "endereco": "R. Herculano Cordeiro, 294 - Salgado",
+    "email": "tabernaculodedavicaruaru@gmail.com",
+    "googleMapsUrl": "https://maps.app.goo.gl/4Gu1yXdouCcGHBmw6",
+    "instagramUrl": "https://www.instagram.com/tddsede/",
+    "youtubeUrl": "https://www.youtube.com/@tabernaculodedavioficial",
+    "facebookUrl": "https://www.facebook.com/tabernaculodedavioficial"
+  },
+  "temaDoMes": {
+    "ativo": true,
+    "badge": "Tema do Mês",
+    "modoAutomatico": true,
+    "temasPorMes": {
+      "1": {
+        "titulo": "Renovação e Oração",
+        "versiculo": "Eis que faço novas todas as coisas.",
+        "referencia": "Apocalipse 21:5",
+        "descricao": "Consagrando o início do ano na presença de Deus com jejum, oração e renovação espiritual.",
+        "corDestaque": "#38bdf8"
+      },
+      "2": {
+        "titulo": "Intimidade com Deus",
+        "versiculo": "Chegai-vos a Deus, e ele se chegará a vós.",
+        "referencia": "Tiago 4:8",
+        "descricao": "Buscando um relacionamento mais profundo através do secreto, da adoração e da Palavra.",
+        "corDestaque": "#a855f7"
+      },
+      "3": {
+        "titulo": "A Força da Comunhão",
+        "versiculo": "Oh! Quão bom e quão suave é que os irmãos vivam em união.",
+        "referencia": "Salmos 133:1",
+        "descricao": "Fortalecendo os laços da família e a unidade do corpo de Cristo.",
+        "corDestaque": "#06b6d4"
+      },
+      "4": {
+        "titulo": "O Poder da Cruz e da Ressurreição",
+        "versiculo": "Ele não está aqui, porque já ressuscitou, como havia dito.",
+        "referencia": "Mateus 28:6",
+        "descricao": "Celebrando a vitória de Cristo sobre a morte e a esperança da vida eterna.",
+        "corDestaque": "#f43f5e"
+      },
+      "5": {
+        "titulo": "Edificando Nossos Lares",
+        "versiculo": "Se o Senhor não edificar a casa, em vão trabalham os que a edificam.",
+        "referencia": "Salmos 127:1",
+        "descricao": "Restaurando altares de oração e alianças de fé dentro dos nossos lares.",
+        "corDestaque": "#f97316"
+      },
+      "6": {
+        "titulo": "Vivendo o IDE de Jesus",
+        "versiculo": "Ide por todo o mundo, pregai o evangelho a toda criatura.",
+        "referencia": "Marcos 16:15",
+        "descricao": "Evangelismo intencional, compaixão pelas almas e proclamar o Reino de Deus.",
+        "corDestaque": "#eab308"
+      },
+      "7": {
+        "titulo": "O Altar da Adoração Contínua",
+        "versiculo": "Deus é Espírito, e importa que os que o adoram o adorem em espírito e em verdade.",
+        "referencia": "João 4:24",
+        "descricao": "Restaurando a adoração ininterrupta e o louvor sincero diante do trono de Deus.",
+        "corDestaque": "#6366f1"
+      },
+      "8": {
+        "titulo": "Batismo com o Espírito Santo",
+        "versiculo": "Mas recebereis a virtude do Espírito Santo, que há de vir sobre vós; e ser-me-eis testemunhas.",
+        "referencia": "Atos 1:8",
+        "descricao": "Neste mês, buscamos o revestimento de poder, as chamas do avivamento e a unção do Espírito Santo sobre toda a igreja.",
+        "corDestaque": "#ef4444"
+      },
+      "9": {
+        "titulo": "Arrependimento",
+        "versiculo": "Arrependei-vos, pois, e convertei-vos, para que sejam apagados os vossos pecados.",
+        "referencia": "Atos 3:19",
+        "descricao": "Um tempo de humildade, quebrantamento de coração e reconciliação sincera diante do Altíssimo.",
+        "corDestaque": "#9ca3af"
+      },
+      "10": {
+        "titulo": "Proteção Divina",
+        "versiculo": "Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará.",
+        "referencia": "Salmos 91:1",
+        "descricao": "Declarando a segurança, a fidelidade de Deus e a cobertura espiritual sobre cada família.",
+        "corDestaque": "#2563eb"
+      },
+      "11": {
+        "titulo": "Provisão de Deus",
+        "versiculo": "O meu Deus, segundo as suas riquezas, suprirá todas as vossas necessidades em glória, por Cristo Jesus.",
+        "referencia": "Filipenses 4:19",
+        "descricao": "Celebrando o sustento, a fidelidade financeira e a abundância das bênçãos do Senhor.",
+        "corDestaque": "#16a34a"
+      },
+      "12": {
+        "titulo": "Gratidão",
+        "versiculo": "Em tudo dai graças, porque esta é a vontade de Deus em Cristo Jesus para convosco.",
+        "referencia": "1 Tessalonicenses 5:18",
+        "descricao": "Encerrando o ano em louvor, celebração e profundo reconhecimento pelas vitórias alcançadas.",
+        "corDestaque": "#eab308"
+      }
+    }
+  },
+  "agendaSemanal": [
+    {
+      "id": "culto-domingo",
+      "ativo": true,
+      "dia": "Domingo",
+      "titulo": "Culto Principal da Família",
+      "horario": "18h00",
+      "descricao": "Grande celebração da igreja com louvor, adoração e pregação da Palavra.",
+      "destaque": true,
+      "detalhes": "O momento central da nossa semana! Contamos com acolhimento especial para visitantes e Departamento Infantil ativo."
+    },
+    {
+      "id": "culto-segunda",
+      "ativo": true,
+      "dia": "Segunda-feira",
+      "titulo": "Culto de Oração",
+      "horario": "19h30",
+      "descricao": "Momento de intercessão, clamor pelas famílias e busca pela presença de Deus.",
+      "destaque": false,
+      "detalhes": "Leve seus pedidos de oração. Iniciamos com 30 minutos de clamor silencioso, seguido por louvor e palavra pastoral."
+    },
+    {
+      "id": "culto-quarta",
+      "ativo": true,
+      "dia": "Quarta-feira",
+      "titulo": "Culto de Quarta",
+      "horario": "19h30",
+      "descricao": "Edificação através da Palavra, cura, libertação e restauração de vidas.",
+      "destaque": false,
+      "detalhes": "Culto focado no ensino prático das Escrituras e oração individual com imposição de mãos."
+    }
+  ],
+  "agendaCultos": [
+    {
+      "id": "culto-domingo",
+      "ativo": true,
+      "dia": "Domingo",
+      "titulo": "Culto Principal da Família",
+      "horario": "18h00",
+      "descricao": "Grande celebração da igreja com louvor, adoração e pregação da Palavra.",
+      "destaque": true,
+      "detalhes": "O momento central da nossa semana! Contamos com acolhimento especial para visitantes e Departamento Infantil ativo."
+    },
+    {
+      "id": "culto-segunda",
+      "ativo": true,
+      "dia": "Segunda-feira",
+      "titulo": "Culto de Oração",
+      "horario": "19h30",
+      "descricao": "Momento de intercessão, clamor pelas famílias e busca pela presença de Deus.",
+      "destaque": false,
+      "detalhes": "Leve seus pedidos de oração. Iniciamos com 30 minutos de clamor silencioso, seguido por louvor e palavra pastoral."
+    },
+    {
+      "id": "culto-quarta",
+      "ativo": true,
+      "dia": "Quarta-feira",
+      "titulo": "Culto de Quarta",
+      "horario": "19h30",
+      "descricao": "Edificação através da Palavra, cura, libertação e restauração de vidas.",
+      "destaque": false,
+      "detalhes": "Culto focado no ensino prático das Escrituras e oração individual com imposição de mãos."
+    }
+  ],
+  "eventos": [
+    {
+      "id": "vigilia-adoracao",
+      "ativo": false,
+      "titulo": "Vigília de Adoração e Clamor",
+      "data": "15 de Agosto de 2026",
+      "horario": "22h00 às 05h00",
+      "local": "Templo Sede (R. Herculano Cordeiro, 294)",
+      "descricao": "Uma noite especial dedicada à oração contínua, louvor espontâneo e quebrantamento na presença do Senhor.",
+      "detalhes": "Programação especial dividida em turnos de intercessão, ministração da Palavra na madrugada e café da manhã comunitário ao amanhecer.",
+      "tag": "Especial",
+      "imagem": "img/bg-pastor-adoracao.webp",
+      "linkTexto": "Mais informações",
+      "link": "#contato"
+    },
+    {
+      "id": "encontro-renova",
+      "ativo": false,
+      "titulo": "Conferência Renova Jovem 2026",
+      "data": "05 de Setembro de 2026",
+      "horario": "19h00",
+      "local": "Templo Sede",
+      "descricao": "Uma geração despertada para a santidade, propósito e cumprimento da Grande Comissão.",
+      "detalhes": "Presença de preletores convidados, bandas regionais de louvor e oficinas de capacitação ministerial para a juventude.",
+      "tag": "Jovens",
+      "imagem": "img/bg-renova-jovem.webp",
+      "linkTexto": "Garantir Vaga",
+      "link": "#contato"
+    }
+  ],
+  "campanhas": [
+    {
+      "id": "campanha-21dias",
+      "ativo": false,
+      "titulo": "21 Dias de Jejum e Oração",
+      "periodo": "De 01 a 21 de Outubro",
+      "descricao": "Consagração total pela salvação de famílias, avivamento local e quebrantamento espiritual.",
+      "detalhes": "Boletim diário com temas de oração, devocionais matutinos e cultos especiais de encerramento.",
+      "badge": "Propósito",
+      "imagem": "img/bg-culto-fachada.webp"
+    }
+  ],
+  "lideranca": [
+    {
+      "id": "pastor-erivonaldo",
+      "ativo": true,
+      "nome": "Erivonaldo Teixeira",
+      "cargo": "Pastor Presidente",
+      "descricao": "Liderança pastoral focada na pregação da Palavra, direção espiritual e cuidado com o rebanho.",
+      "imagem": "img/pastor-erivonaldo-2026.jpg",
+      "fundoBranco": false
+    },
+    {
+      "id": "pastora-marta",
+      "ativo": true,
+      "nome": "Marta Teixeira",
+      "cargo": "Pastora",
+      "descricao": "Referência de apoio ministerial, ensino, intercessão e fortalecimento das famílias.",
+      "imagem": "img/pastora-marta-2026.jpg",
+      "fundoBranco": true
+    }
+  ],
+  "departamentos": [
+    {
+      "id": "renovajovem",
+      "ativo": true,
+      "categoria": "Jovens",
+      "titulo": "Renova Jovem",
+      "descricao": "Comunhão, discipulado e fortalecimento espiritual para a juventude.",
+      "imagem": "img/renova-jovem.svg",
+      "link": "#contato"
+    },
+    {
+      "id": "casais",
+      "ativo": true,
+      "categoria": "Família",
+      "titulo": "Rede de Casais",
+      "descricao": "Encontros e sermões dedicados à edificação de lares sólidos no Senhor.",
+      "imagem": "img/casais.jpg",
+      "link": "#contato"
+    },
+    {
+      "id": "midia",
+      "ativo": true,
+      "categoria": "Comunicação",
+      "titulo": "Mídia",
+      "descricao": "Comunicação visual, transmissões ao vivo e registros dos cultos.",
+      "imagem": "img/midia.webp",
+      "link": "#contato"
+    },
+    {
+      "id": "teatro",
+      "ativo": true,
+      "categoria": "Artes",
+      "titulo": "Teatro",
+      "descricao": "Evangelismo criativo e artes para ministrar a mensagem do Evangelho.",
+      "imagem": "img/teatro.webp",
+      "link": "#contato"
+    },
+    {
+      "id": "guardias",
+      "ativo": true,
+      "categoria": "Mulheres",
+      "titulo": "Guardiãs da Fé",
+      "descricao": "Ministério de mulheres focado em oração, comunhão, ensino e fortalecimento da fé.",
+      "imagem": "img/guardias-da-fe.jpg",
+      "link": "#contato"
+    },
+    {
+      "id": "kids",
+      "ativo": true,
+      "categoria": "Crianças",
+      "titulo": "Kids",
+      "descricao": "Ministério infantil dedicado ao ensino bíblico, cuidado e atenção às crianças.",
+      "imagem": "img/kids.svg",
+      "link": "#contato"
+    },
+    {
+      "id": "louvor",
+      "ativo": true,
+      "categoria": "Adoração",
+      "titulo": "Grupo de Louvor",
+      "descricao": "Ministério dedicado a conduzir a igreja em adoração com excelência, unidade e sensibilidade.",
+      "imagem": "img/louvor.svg",
+      "link": "#contato"
+    }
+  ],
+  "quemsomos": {
+    "titulo": "IGREJA TABERNÁCULO DE DAVI — Casa de Oração",
+    "missao": {
+      "textoPrincipal": "A nossa missão é obedecer ao IDE de Jesus Cristo, proclamando o evangelho com ousadia, paixão e amor, até os confins da Terra (Mateus 28:19-20).",
+      "chamadosPara": [
+        "Evangelizar os perdidos, levando salvação e libertação através da Palavra e do poder do Espírito Santo.",
+        "Estabelecer um altar de oração e adoração contínua, onde a presença de Deus habita dia e noite.",
+        "Formar e enviar discípulos comprometidos com a vontade de Deus, preparados para influenciar esta geração com santidade, amor e verdade."
+      ],
+      "conclusao": "Como Casa de Oração, nos consagramos a ser um povo sacerdotal, totalmente dedicado a ministrar ao Senhor, interceder pelas nações e viver uma vida de profunda intimidade com Deus."
+    },
+    "visao": {
+      "textoPrincipal": "A visão do Tabernáculo de Davi – Casa de Oração é restaurar o altar da adoração e intercessão contínua (24/7), conforme o modelo bíblico do tabernáculo de Davi (Amós 9:11; Atos 15:16).",
+      "vemosUmaIgreja": [
+        "Cheia do Espírito Santo, apaixonada por Jesus e rendida à Sua presença.",
+        "Onde oração e adoração não param, dia e noite, como incenso constante diante do trono de Deus (Salmo 141:2).",
+        "Que evangeliza com poder e compaixão, levando o Reino de Deus às ruas, casas, cidades e nações.",
+        "Que forma discípulos maduros, curados e equipados para viver como verdadeiros adoradores e missionários do Reino.",
+        "Que impacta a sociedade e a cultura, influenciando com a verdade do evangelho e o amor de Cristo."
+      ],
+      "conclusao": "Nossa visão é preparar o caminho para a volta do Senhor Jesus, através da adoração incessante, intercessão eficaz e proclamação do evangelho com autoridade."
+    },
+    "valores": [
+      {
+        "numero": 1,
+        "titulo": "Adoração extravagante e contínua",
+        "descricao": "Cremos na adoração como o centro de todas as coisas. Buscamos honrar a Deus com tudo o que somos, oferecendo louvor constante, íntimo e sincero, como nos dias do rei Davi (1 Crônicas 16:4; Salmo 132:4-5)."
+      },
+      {
+        "numero": 2,
+        "titulo": "Oração 24/7 — Incenso contínuo",
+        "descricao": "Nos comprometemos com a oração ininterrupta, pois cremos que ela move céus e terra. Somos uma casa de intercessão que se posiciona na brecha pelas famílias, igrejas, cidades e nações (Isaías 62:6-7; Apocalipse 5:8)."
+      },
+      {
+        "numero": 3,
+        "titulo": "Evangelismo intencional e corajoso",
+        "descricao": "Vivemos o IDE de Jesus. Levamos o evangelho a todos os lugares com ousadia, compaixão e demonstração do poder de Deus, buscando alcançar os perdidos com a mensagem da cruz (Marcos 16:15; Romanos 1:16)."
+      },
+      {
+        "numero": 4,
+        "titulo": "Presença de Deus acima de tudo",
+        "descricao": "A presença do Senhor é a nossa prioridade máxima. Tudo o que fazemos nasce da intimidade com Deus e do desejo de agradar Seu coração (Êxodo 33:15)."
+      },
+      {
+        "numero": 5,
+        "titulo": "Santidade e integridade",
+        "descricao": "Somos chamados à pureza de coração e à obediência total. Vivemos de forma consagrada, refletindo o caráter de Cristo em todas as áreas da vida (1 Pedro 1:15-16)."
+      },
+      {
+        "numero": 6,
+        "titulo": "Amor por Deus e pelas pessoas",
+        "descricao": "Amamos a Deus de todo o coração e servimos ao próximo com compaixão e humildade. O amor é a base de todas as nossas ações (Mateus 22:37-39; João 13:35)."
+      },
+      {
+        "numero": 7,
+        "titulo": "Unidade e honra no corpo de Cristo",
+        "descricao": "Valorizamos a comunhão, a honra mútua e o trabalho em unidade. Reconhecemos os dons uns dos outros e caminhamos juntos como família (Efésios 4:3-4)."
+      },
+      {
+        "numero": 8,
+        "titulo": "Discipulado e formação de servos",
+        "descricao": "Treinamos filhos e filhas para viverem como discípulos radicais, fundamentados na Palavra, guiados pelo Espírito e prontos para servir e liderar (Mateus 28:20; 2 Timóteo 2:2)."
+      },
+      {
+        "numero": 9,
+        "titulo": "Serviço com compaixão e justiça",
+        "descricao": "Agimos com misericórdia, ajudando os necessitados, sendo resposta às dores da sociedade e levando o Reino de Deus em obras e palavras (Tiago 1:27; Miquéias 6:8)."
+      }
+    ],
+    "versiculosChave": [
+      { "referencia": "Isaías 56:7", "texto": "Porque a minha casa será chamada casa de oração para todos os povos." },
+      { "referencia": "Amós 9:11", "texto": "Naquele dia levantarei o tabernáculo caído de Davi..." },
+      { "referencia": "Mateus 28:19-20", "texto": "Ide, portanto, e fazei discípulos de todas as nações..." },
+      { "referencia": "Atos 15:16", "texto": "...reedificarei o tabernáculo de Davi, que está caído." },
+      { "referencia": "Salmo 27:4", "texto": "...que eu possa morar na casa do Senhor todos os dias da minha vida..." }
+    ]
+  }
+}

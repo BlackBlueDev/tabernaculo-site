@@ -175,7 +175,7 @@ p {
 .icon {
   width: 1.25rem;
   height: 1.25rem;
-  fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* Accordion Buttons & Collapsible Tabs */
@@ -262,7 +262,7 @@ p {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* Header & Navigation (Respiro Visual, Tipografia 0.88rem, Gap 2.2rem) */
+/* Header & Navigation */
 .site-header {
   position: fixed;
   top: 0;
@@ -294,7 +294,6 @@ p {
   text-decoration: none;
 }
 
-/* Logo: Sem círculo laranja, fundo 100% transparente, ampliada */
 .brand-logo {
   height: 64px;
   width: auto;
@@ -326,7 +325,6 @@ p {
   letter-spacing: 0.03em;
 }
 
-/* Menu Superior: Tipografia 0.88rem e Espaçamento Aumentado (2.2rem) */
 .site-nav {
   display: flex;
   align-items: center;
@@ -739,7 +737,7 @@ p {
   display: block;
 }
 
-/* Leadership Grid (Pastores): Proporção Proporcional Compacta 500x500 */
+/* Leadership Grid */
 .leadership-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -759,11 +757,10 @@ p {
   transform: translateY(-4px);
 }
 
-/* Proporção 500x500 (1:1 Aspect Ratio) para Celular e PC */
 .pastor-img-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-height: 340px;
+  aspect-ratio: 3 / 4;
+  max-height: 280px;
   overflow: hidden;
   position: relative;
   background-color: #0b0d14;
@@ -805,7 +802,7 @@ p {
   letter-spacing: 0.05em;
 }
 
-/* Departments Grid (7 Departamentos Padronizados em 500x500) */
+/* Departments Grid */
 .dept-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -828,7 +825,6 @@ p {
   box-shadow: var(--shadow-graphite);
 }
 
-/* Container de Imagem no formato quadrado 500x500 (1:1 Aspect Ratio) */
 .dept-thumb {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -852,7 +848,6 @@ p {
   transform: scale(1.05);
 }
 
-/* Título e Descrição exibidos obrigatoriamente ABAIXO da imagem */
 .dept-content {
   padding: 1.5rem;
   flex-grow: 1;
@@ -1014,7 +1009,7 @@ p {
   color: var(--text-dim);
 }
 
-/* Scroll Animations (IntersectionObserver) */
+/* Scroll Animations */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -1026,11 +1021,7 @@ p {
   transform: translateY(0);
 }
 
-/* ==========================================================================
-   TAILORED DEVICE STYLES & BREAKPOINTS (CELULAR, TABLET, PC)
-   ========================================================================== */
-
-/* 📱 1. CELULAR / MOBILE MODE (< 640px) */
+/* Breakpoints (Celular, Tablet, PC) */
 @media (max-width: 640px), body.device-mobile {
   .container {
     padding: 0 1rem;
@@ -1132,9 +1123,48 @@ p {
     margin-bottom: 2rem;
   }
 
-  .card-grid, .dept-grid, .leadership-grid, .contact-grid {
+  .card-grid, .contact-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
+  }
+
+  /* Slider Horizontal por Toque (Arrastar para o lado no Celular) */
+  .dept-grid, .leadership-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .dept-grid::-webkit-scrollbar,
+  .leadership-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .dept-grid::-webkit-scrollbar-thumb,
+  .leadership-grid::-webkit-scrollbar-thumb {
+    background: var(--border-accent);
+    border-radius: 4px;
+  }
+
+  .pastor-card, .dept-card {
+    flex: 0 0 80%;
+    max-width: 270px;
+    scroll-snap-align: start;
+  }
+
+  .pastor-img-wrapper {
+    max-height: 240px;
+  }
+
+  .dept-thumb {
+    max-height: 180px;
   }
 
   .theme-card {
@@ -1165,7 +1195,6 @@ p {
   }
 }
 
-/* 📱 2. TABLET MODE (641px - 1024px) */
 @media (min-width: 641px) and (max-width: 1024px), body.device-tablet {
   .container {
     padding: 0 1.5rem;
@@ -1201,7 +1230,6 @@ p {
   }
 }
 
-/* 🖥️ 3. PC / DESKTOP MODE (> 1025px) */
 @media (min-width: 1025px), body.device-desktop {
   .menu-toggle {
     display: none;

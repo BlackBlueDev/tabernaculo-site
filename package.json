@@ -1,0 +1,19 @@
+{
+  "name": "tabernaculo-de-davi-sede",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 2020 --open",
+    "build": "vite build",
+    "preview": "vite preview --port 2020"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.344.0",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.1.6"
+  }
+}
