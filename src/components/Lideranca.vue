@@ -27,11 +27,17 @@
           </div>
         </div>
       </div>
+
+      <div class="carousel-hint">
+        <ArrowRight class="icon" style="width: 1.1rem; height: 1.1rem;" />
+        <span>Deslize para o lado para ver a liderança</span>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { ArrowRight } from 'lucide-vue-next';
 defineProps({
   liderancaList: {
     type: Array,
