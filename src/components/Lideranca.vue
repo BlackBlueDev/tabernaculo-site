@@ -23,7 +23,7 @@
           <div class="pastor-info">
             <span class="pastor-role">{{ pastor.cargo }}</span>
             <h3 style="margin: 0.3rem 0 0.6rem; font-size: 1.3rem;">{{ pastor.nome }}</h3>
-            <p v-if="pastor.bio" style="font-size: 0.95rem;">{{ pastor.bio }}</p>
+            <p v-if="pastor.descricao || pastor.bio" style="font-size: 0.95rem;">{{ pastor.descricao || pastor.bio }}</p>
           </div>
         </div>
       </div>

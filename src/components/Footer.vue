@@ -14,7 +14,6 @@
           <h4>Navegação</h4>
           <ul class="footer-links">
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#tema-mes">Tema do Mês</a></li>
             <li><a href="#cultos">Cultos</a></li>
             <li><a href="#sobre">Quem Somos</a></li>
             <li><a href="#departamentos">Ministérios</a></li>

@@ -1050,12 +1050,12 @@ p {
     flex-direction: row;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-padding: 0 1.5rem;
     -webkit-overflow-scrolling: touch;
     gap: 1.2rem;
-    padding-bottom: 1rem;
-    margin: 0 -1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    margin: 0 -1.5rem;
+    width: calc(100% + 3rem);
   }
 
   .dept-grid::-webkit-scrollbar,
@@ -1070,14 +1070,41 @@ p {
   }
 
   .pastor-card, .dept-card {
-    flex: 0 0 82%;
-    max-width: 280px;
-    scroll-snap-align: start;
+    flex: 0 0 85%;
+    max-width: 300px;
+    scroll-snap-align: center;
+    height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .pastor-img-wrapper {
-    aspect-ratio: 3 / 4;
-    height: 320px;
+    aspect-ratio: 4 / 4.5;
+    height: 270px;
+    flex-shrink: 0;
+  }
+
+  .pastor-info {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .pastor-info h3 {
+    font-size: 1.25rem !important;
+    word-break: break-word;
+  }
+
+  .pastor-info p {
+    font-size: 0.92rem !important;
+    line-height: 1.6;
+    color: #d1d5db;
+    margin-top: 0.4rem;
+    word-break: break-word;
+    overflow: visible;
   }
 
   .dept-thumb {

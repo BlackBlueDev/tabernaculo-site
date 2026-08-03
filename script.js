@@ -128,6 +128,15 @@ const app = createApp({
       return startTime;
     };
 
+    const sanitizeEventTitle = (rawTitle) => {
+      if (!rawTitle) return 'Culto Especial';
+      const clean = rawTitle.trim();
+      if (/^busy$/i.test(clean) || /^occupied$/i.test(clean) || /^private$/i.test(clean) || /^ocupado$/i.test(clean)) {
+        return 'Culto Especial';
+      }
+      return clean;
+    };
+
     const sortedCultosCards = computed(() => {
       const cards = [];
 
@@ -153,16 +162,17 @@ const app = createApp({
       // 2. Eventos Dinâmicos do Google Agenda
       googleEvents.value.forEach(event => {
         const dIndex = getDayIndex(null, event.start);
+        const titleClean = sanitizeEventTitle(event.title);
         cards.push({
           id: event.id,
           diaLabel: formatEventDay(event.start),
           dayIndex: dIndex,
-          titulo: event.title,
+          titulo: titleClean,
           horario: formatEventTime(event.start, event.end),
           descricao: event.description || '',
           orientacao: event.description ? `Informações do evento: ${event.description}` : 'Evento agendado oficialmente na igreja.',
           location: event.location || '',
-          badge: event.title.toLowerCase().includes('jovens') ? 'Culto dos Jovens' : 'Culto Especial',
+          badge: titleClean.toLowerCase().includes('jovens') ? 'Culto dos Jovens' : 'Culto Especial',
           destaque: true,
           isDynamic: true
         });
@@ -187,7 +197,8 @@ const app = createApp({
         const dtstartMatch = block.match(/DTSTART(?:;[^:]*)?:(.*)/);
         const dtendMatch = block.match(/DTEND(?:;[^:]*)?:(.*)/);
 
-        const title = summaryMatch ? summaryMatch[1].trim() : 'Culto Especial';
+        const rawSummary = summaryMatch ? summaryMatch[1].trim() : 'Culto Especial';
+        const title = sanitizeEventTitle(rawSummary);
         const description = descMatch ? descMatch[1].replace(/\\n/g, ' ').replace(/\\/g, '').trim() : '';
         const location = locMatch ? locMatch[1].replace(/\\/g, '').trim() : '';
 
@@ -245,7 +256,7 @@ const app = createApp({
             const data = await res.json();
             googleEvents.value = (data.items || []).map(item => ({
               id: item.id,
-              title: item.summary || 'Culto Especial',
+              title: sanitizeEventTitle(item.summary),
               description: item.description || '',
               location: item.location || '',
               start: new Date(item.start.dateTime || item.start.date),

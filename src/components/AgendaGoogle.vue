@@ -98,6 +98,15 @@ const props = defineProps({
 const loading = ref(true);
 const events = ref([]);
 
+const sanitizeEventTitle = (rawTitle) => {
+  if (!rawTitle) return 'Culto Especial';
+  const clean = rawTitle.trim();
+  if (/^busy$/i.test(clean) || /^occupied$/i.test(clean) || /^private$/i.test(clean) || /^ocupado$/i.test(clean)) {
+    return 'Culto Especial';
+  }
+  return clean;
+};
+
 /**
  * Parses raw iCal string (basic.ics) into event objects
  */
@@ -117,7 +126,8 @@ const parseICalData = (icalText) => {
     const dtstartMatch = block.match(/DTSTART(?:;[^:]*)?:(.*)/);
     const dtendMatch = block.match(/DTEND(?:;[^:]*)?:(.*)/);
 
-    const title = summaryMatch ? summaryMatch[1].trim() : 'Evento Agendado';
+    const rawSummary = summaryMatch ? summaryMatch[1].trim() : 'Evento Agendado';
+    const title = sanitizeEventTitle(rawSummary);
     const description = descMatch ? descMatch[1].replace(/\\n/g, ' ').replace(/\\/g, '').trim() : '';
     const location = locMatch ? locMatch[1].replace(/\\/g, '').trim() : '';
 
@@ -185,15 +195,18 @@ const fetchGoogleEvents = async () => {
       const res = await fetch(url);
       if (res.ok) {
         const data = await res.json();
-        events.value = (data.items || []).map(item => ({
-          id: item.id,
-          title: item.summary || 'Evento Agendado',
-          description: item.description || '',
-          location: item.location || '',
-          start: new Date(item.start.dateTime || item.start.date),
-          end: new Date(item.end?.dateTime || item.end?.date || item.start.dateTime || item.start.date),
-          category: (item.summary || '').toLowerCase().includes('jovens') ? 'Culto dos Jovens' : 'Evento Especial'
-        }));
+        events.value = (data.items || []).map(item => {
+          const title = sanitizeEventTitle(item.summary);
+          return {
+            id: item.id,
+            title: title,
+            description: item.description || '',
+            location: item.location || '',
+            start: new Date(item.start.dateTime || item.start.date),
+            end: new Date(item.end?.dateTime || item.end?.date || item.start.dateTime || item.start.date),
+            category: title.toLowerCase().includes('jovens') ? 'Culto dos Jovens' : 'Evento Especial'
+          };
+        });
         loading.value = false;
         return;
       }
