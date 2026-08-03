@@ -68,6 +68,7 @@
 
     <!-- Rodapé -->
     <Footer 
+      :logo-url="conteudo.imagensGlobais?.logoCabecalho"
       :nome-igreja="conteudo.igreja?.nome"
       :subtitulo-igreja="conteudo.igreja?.subtitulo"
       :cidade="conteudo.igreja?.cidade"

@@ -10,7 +10,7 @@
     "exibirDepartamentos": true
   },
   "imagensGlobais": {
-    "logoCabecalho": "img/logo-tabernaculo.jpg",
+    "logoCabecalho": "img/logo-tabernaculo.png",
     "heroBackground": "img/hero-fachada-exterior.webp",
     "sobreImagem": "img/sobre-acolhimento.webp"
   },
@@ -236,7 +236,7 @@
       "nome": "Erivonaldo Teixeira",
       "cargo": "Pastor Presidente",
       "descricao": "Liderança pastoral focada na pregação da Palavra, direção espiritual e cuidado com o rebanho.",
-      "imagem": "img/pastor-erivonaldo-2026.jpg",
+      "imagem": "img/pastor-erivonaldo-2026.png",
       "fundoBranco": false
     },
     {
@@ -245,8 +245,8 @@
       "nome": "Marta Teixeira",
       "cargo": "Pastora",
       "descricao": "Referência de apoio ministerial, ensino, intercessão e fortalecimento das famílias.",
-      "imagem": "img/pastora-marta-2026.jpg",
-      "fundoBranco": true
+      "imagem": "img/pastora-marta-2026.png",
+      "fundoBranco": false
     }
   ],
   "departamentos": [
@@ -256,7 +256,7 @@
       "categoria": "Jovens",
       "titulo": "Renova Jovem",
       "descricao": "Comunhão, discipulado e fortalecimento espiritual para a juventude.",
-      "imagem": "img/renova-jovem.svg",
+      "imagem": "img/renova-jovem.png",
       "link": "#contato"
     },
     {
@@ -265,7 +265,7 @@
       "categoria": "Família",
       "titulo": "Rede de Casais",
       "descricao": "Encontros e sermões dedicados à edificação de lares sólidos no Senhor.",
-      "imagem": "img/casais.jpg",
+      "imagem": "img/casais.png",
       "link": "#contato"
     },
     {
@@ -274,7 +274,7 @@
       "categoria": "Comunicação",
       "titulo": "Mídia",
       "descricao": "Comunicação visual, transmissões ao vivo e registros dos cultos.",
-      "imagem": "img/midia.webp",
+      "imagem": "img/midia.png",
       "link": "#contato"
     },
     {
@@ -283,7 +283,7 @@
       "categoria": "Artes",
       "titulo": "Teatro",
       "descricao": "Evangelismo criativo e artes para ministrar a mensagem do Evangelho.",
-      "imagem": "img/teatro.webp",
+      "imagem": "img/teatro.png",
       "link": "#contato"
     },
     {
@@ -292,7 +292,7 @@
       "categoria": "Mulheres",
       "titulo": "Guardiãs da Fé",
       "descricao": "Ministério de mulheres focado em oração, comunhão, ensino e fortalecimento da fé.",
-      "imagem": "img/guardias-da-fe.jpg",
+      "imagem": "img/guardias-da-fe.png",
       "link": "#contato"
     },
     {
@@ -301,7 +301,7 @@
       "categoria": "Crianças",
       "titulo": "Kids",
       "descricao": "Ministério infantil dedicado ao ensino bíblico, cuidado e atenção às crianças.",
-      "imagem": "img/kids.svg",
+      "imagem": "img/kids.png",
       "link": "#contato"
     },
     {
@@ -310,7 +310,7 @@
       "categoria": "Adoração",
       "titulo": "Grupo de Louvor",
       "descricao": "Ministério dedicado a conduzir a igreja em adoração com excelência, unidade e sensibilidade.",
-      "imagem": "img/louvor.svg",
+      "imagem": "img/louvor.png",
       "link": "#contato"
     }
   ],

@@ -3,7 +3,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3 style="color: #ffffff;">{{ nomeIgreja || 'TABERNÁCULO DE DAVI' }}</h3>
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <img :src="logoUrl || 'img/logo-tabernaculo.png'" alt="Logo Tabernáculo de Davi" class="footer-logo">
+            <h3 style="color: #ffffff; margin: 0;">{{ nomeIgreja || 'TABERNÁCULO DE DAVI' }}</h3>
+          </div>
           <p>{{ subtituloIgreja || 'Casa de Oração e Adoração' }} em {{ cidade || 'Caruaru - PE' }}. Uma comunidade dedicada a glorificar a Deus e edificar vidas.</p>
         </div>
 
@@ -41,6 +44,7 @@
 import { ref } from 'vue';
 
 defineProps({
+  logoUrl: String,
   nomeIgreja: String,
   subtituloIgreja: String,
   cidade: String,

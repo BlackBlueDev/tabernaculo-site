@@ -3,7 +3,7 @@
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label="Ir para o início">
         <img 
-          :src="logoUrl || 'img/logo-tabernaculo.jpg'" 
+          :src="logoUrl || 'img/logo-tabernaculo.png'" 
           alt="Logo Tabernáculo de Davi" 
           class="brand-logo"
         >
