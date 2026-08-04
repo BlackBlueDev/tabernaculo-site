@@ -1065,16 +1065,19 @@ p {
 
   /* Slider Horizontal da Liderança Pastoral: 1 Card 100% visível por tela */
   .leadership-grid {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0;
-    -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    padding: 0.5rem 0 1.5rem 0;
-    margin: 0;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 1.5rem !important;
+    padding: 0.5rem 0 1.5rem 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
   }
 
   .dept-grid::-webkit-scrollbar,
@@ -1089,43 +1092,48 @@ p {
   }
 
   .pastor-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .pastor-img-wrapper {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    height: 320px;
-    flex-shrink: 0;
+    width: 100% !important;
+    aspect-ratio: 3 / 4 !important;
+    height: 320px !important;
+    flex-shrink: 0 !important;
   }
 
   .pastor-info {
-    padding: 1.4rem 1.2rem 1.6rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    padding: 1.5rem 1.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
 
   .pastor-info h3 {
     font-size: 1.35rem !important;
-    word-break: break-word;
+    margin: 0.3rem 0 0.6rem !important;
+    word-break: break-word !important;
   }
 
   .pastor-info p {
     font-size: 0.95rem !important;
-    line-height: 1.6;
-    color: #d1d5db;
-    margin-top: 0.4rem;
-    word-break: break-word;
+    line-height: 1.6 !important;
+    color: #d1d5db !important;
+    margin: 0 !important;
+    word-break: break-word !important;
   }
 
   .carousel-hint {
