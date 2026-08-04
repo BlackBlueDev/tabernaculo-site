@@ -28,7 +28,6 @@
 
       <nav class="site-nav" :class="{ 'open': isMenuOpen }" id="menu" aria-label="Menu principal">
         <a href="#inicio" @click="closeMenu">Início</a>
-        <a v-if="config.exibirTemaDoMes !== false" href="#tema-mes" @click="closeMenu">Tema do Mês</a>
         <a href="#cultos" @click="closeMenu">Cultos</a>
         <a href="#sobre" @click="closeMenu">Quem Somos</a>
         <a href="#departamentos" @click="closeMenu">Ministérios</a>
