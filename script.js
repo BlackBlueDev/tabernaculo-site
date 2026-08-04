@@ -90,6 +90,27 @@ const app = createApp({
       return temaConfig.custom || temaConfig.temasPorMes?.['8'] || {};
     });
 
+    const hexToRgba = (hex, alpha = 0.4) => {
+      if (!hex) return `rgba(239, 68, 68, ${alpha})`;
+      let c = hex.replace('#', '');
+      if (c.length === 3) c = c.split('').map(x => x + x).join('');
+      const num = parseInt(c, 16);
+      if (isNaN(num)) return `rgba(239, 68, 68, ${alpha})`;
+      return `rgba(${(num >> 16) & 255}, ${(num >> 8) & 255}, ${num & 255}, ${alpha})`;
+    };
+
+    const themeCardStyle = computed(() => {
+      const color = currentTheme.value.corDestaque || '#ef4444';
+      const glow1 = hexToRgba(color, 0.45);
+      const glow2 = hexToRgba(color, 0.22);
+      const glowInset = hexToRgba(color, 0.15);
+
+      return {
+        borderColor: color,
+        boxShadow: `0 0 25px -2px ${glow1}, 0 0 55px -6px ${glow2}, inset 0 0 25px -5px ${glowInset}`
+      };
+    });
+
     const getDayIndex = (dayStr, dateObj) => {
       if (dateObj instanceof Date && !isNaN(dateObj)) {
         return dateObj.getDay();
@@ -326,6 +347,7 @@ const app = createApp({
       activeAboutTab,
       currentYear,
       currentTheme,
+      themeCardStyle,
       sortedCultosCards,
       toggleMenu,
       closeMenu,

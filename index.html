@@ -104,8 +104,8 @@
         <!-- Tema do Mês -->
         <section v-if="conteudo.configuracoes?.exibirTemaDoMes !== false && currentTheme.titulo" class="section section-dark" id="tema-mes">
           <div class="container">
-            <div class="theme-card reveal visible">
-              <span class="section-tag" :style="{ color: currentTheme.corDestaque || '#cbd5e1', borderColor: currentTheme.corDestaque || 'rgba(148, 163, 184, 0.35)' }">
+            <div class="theme-card reveal visible" :style="themeCardStyle">
+              <span class="section-tag" :style="{ color: currentTheme.corDestaque || '#cbd5e1', borderColor: currentTheme.corDestaque || 'rgba(148, 163, 184, 0.35)', boxShadow: '0 0 12px ' + (currentTheme.corDestaque || '#ef4444') + '55' }">
                 {{ conteudo.temaDoMes?.badge || 'Tema do Mês' }}
               </span>
               

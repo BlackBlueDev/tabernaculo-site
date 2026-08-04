@@ -532,15 +532,16 @@ p {
   box-shadow: var(--shadow-md);
 }
 
-/* Tema do Mês Banner */
+/* Tema do Mês Banner com Brilho Neon Dinâmico */
 .theme-card {
   background: linear-gradient(135deg, rgba(22, 27, 44, 0.95) 0%, rgba(17, 20, 32, 0.95) 100%);
-  border: 1px solid var(--border-accent);
+  border: 1.5px solid var(--border-accent);
   border-radius: var(--radius-lg);
   padding: 3rem 2.5rem;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-graphite);
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .theme-card::before {
